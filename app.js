@@ -3,6 +3,7 @@ const addButton = document.querySelector('.buttoninput');
 const todoList = document.querySelector('.todolist');
 
 addButton.addEventListener('click', () => {
+    if (textarea.value != ''){
     // Create a new task/item element
     const task = document.createElement('div');
     task.classList.add('task');
@@ -20,6 +21,7 @@ addButton.addEventListener('click', () => {
     todoList.appendChild(task);
     // Clear the input field
     textarea.value = '';
+}
 });
 todoList.addEventListener('click', (event) => {
     const target = event.target;
